@@ -15,4 +15,7 @@ Note: Truy vấn độc lập là các truy vấn chỉ áp dụng lên hiện t
 - Với trường hợp 1 hàng + 2 cột: đặt $\sum_{col}[j]$ là tổng các số trong cột thứ $j$. Ta sẽ lưu tất cả các giá trị $\sum_{col}[]$ vào một set/multiset.  
 - Nếu ta chọn hàng thứ $i$, với mỗi giá trị $a[i][j]$, ta sẽ cập nhật $\sum_{col}[j] -= a[i][j]$ vào set. Sau đó, ta sẽ chọn ra 2 cột có tổng lớn nhất.  
 - Dễ thấy set chỉ bị cập nhật tối đa $M$ lần, vì vậy độ phức tạp của mỗi truy vấn sẽ là $O(M \log N)$.
-  ![image](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/6db86f7e-4df7-4841-aa9a-1d4e420f8acd)
+<p align="center">
+  <img src="![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/618f3614-859d-49b3-9bc0-697f04cf9645)" alt="your_image_alt_text_here">
+</p>
+
