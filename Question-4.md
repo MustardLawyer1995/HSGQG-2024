@@ -62,9 +62,48 @@
 - Độ phức tạp: $O(N × max(A[1], …, A[N]))$.
 ### Subtask 5,6,7:
 - Không mất tính tổng quát, ta có thể chia bài toán làm hai lượt: tách phần tử, và gộp phần tử. Xét thuật toán không tối ưu sau: 
-   - Nếu ban đầu A có nhiều hơn một phần tử, ta gộp tất cả thành một phần tử. Chi phí là (n - 1) * C 
-   - Lúc này ta chỉ cần tách S thành x phần tử L1 và y phần tử L2, giả sử rằng ta biết x, y tối ưu. Chi phí là (x + y - 1) * D
+   - Nếu ban đầu $A$ có nhiều hơn một phần tử, ta gộp tất cả thành một phần tử. Chi phí là $(n - 1) \times C$. 
+   - Lúc này ta chỉ cần tách $S$ thành $x$ phần tử $L1$ và $y$ phần tử $L2$, giả sử rằng ta biết $x, y$ tối ưu. Chi phí là $(x + y - 1) \times D$
 - Dễ thấy rằng thuật toán trên chỉ không tối ưu ở chỗ ta gộp toàn bộ các phần tử với nhau mà không quan tâm ở lượt sau có tách ra ở các vị trí ta đã gộp hay không. 
+- Ý tưởng: Chọn trước các vị trí không cần phải gộp, bài toán trở thành tách dãy $A$ thành các dãy khác nhau. Khi tách thành các dãy con thì chúng không tương tác với nhau, ta đó xử lý riêng trên từng dãy.
+- Ví dụ: 2 4 1 5|8 7 3|8 2 1 3 4 2|9
+- Dùng quy hoạch động: $dp[i]$ là chi phí nhỏ nhất để biến dãy con $A[1],A[2],...,A[i]$ thành một dãy hợp lệ:
+   - $dp[i] → dp[j] + cost(i + 1, j)$: chọn tách $A[i + 1],...,A[j]$ thành một dãy.
+- Với $cost$ là hàm tính chi phí cho một dãy con (sẽ phân tích sau).
+- Tính $cost(l, r)$: chi phí của dãy con $A[l],...,A[r]$.
+   - Gộp các phần tử với nhau: $C \times (r - l)$.
+   - Tách phần tử ($x$ phần tử $L1$ và $y$ phần tử $L2$) : $D \times (x + y - 1)$.
+- Điều kiện $x, y$: 
+   - $x, y ≥ 0$.
+   - $L1 \times x + L2 \times y = sum(A[l],…, A[r])$.
+- Dễ thấy $x, y$ là nghiệm một cặp nghiệm không âm của phương trình Diophantine sao cho $x + y$ nhỏ nhất.
+- Lưu ý rằng cách tính $cost(l, r)$ này có thể không tối ưu nhưng vẫn đúng do ta đang giả sử không gộp và tách cùng một vị trí.
+- Giải phương trình diophantine: $ax + by = c$.
+   - Sử dụng thuật toán Euclid mở rộng để tìm $x, y$ sao cho $ax + by = gcd(a, b)$.
+   - Nếu $c$ không chia hết cho $gcd(a, b)$ thì phương trình vô nghiệm.
+   - Ngược lại nếu $c = k \times gcd(a, b)$, ta tìm được một nghiệm là $(x \times k, y \times k): a \times (x \times k) + b \times (y \times k) = k \times gcd(a,b) = c$.   
+   - Họ nghiệm: (tìm nghiệm khác từ một nghiệm $(x_{0}, y_{0})$ đã biết)
+       - $x = x_0 + k \times b / gcd(a, b)$
+       - $y = y_0 -  k \times a / gcd(a, b)$
+- Độ phức tạp: $O(log(max(a, b)))$.
+- Quay lại bài toán, ta cần tìm $a, b$ nguyên dương sao cho $a + b$ nhỏ nhất thỏa mãn
+    - $L1 \times a + L2 \times b = S = sum(A[1],...,A[N])$.
+- Không mất tính tổng quát, giả sử $L1 ≤ L2$
+- Ta có thể sử dụng thuật toán tham lam: Dùng nhiều phần tử $L2$ nhất có thể, giả sử ta đang dùng $a_0$ phần tử $L1$ và $b_0$ phần tử $L2$
+- Nếu $a_{0} ≥ L2 / gcd(L1, L2)$ ta luôn có một cách tốt hơn là:
+    - $a = a_{0} - L2 / gcd(L1, L2)$.
+    - $b = b_{0} + L1 / gcd(L1, L2)$.
+- Do đó giá trị $a$ trong phương án tối ưu là $a$ không âm nhỏ nhất sao cho $a = a_{0} (mod L2/gcd(L1, L2))$
+- Khi có $a$, có thể dễ dàng tìm $b = (S - a*L1) / L2$ 
+- Xử lý tràn số: (subtask 6, 7) 
+    - Do $A ≤ 109, N ≤ 104$, tổng của một dãy có thể lên đến 1013. 
+    - Giá trị $(x, y)$ trả về của thuật toán Euclid mở rộng trên hai số $a, b$ có thể lên đến $O(max(a, b)) ≈ max(L1, L2) = 109$.
+    - Nghiệm Diophantine trả về ở trên có thể lên đến $1013 × 109= 1022 > 264 - 1$.
+- Ý tưởng: Lấy trước $t$ phần tử $L2$ sao cho $S - t \times L2 < 109$, sau đó thêm vào nghiệm với $c = S - t \times L2$.
+- 
+
+
+
 
 
 
