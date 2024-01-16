@@ -38,11 +38,9 @@ $cost(u, v) = (\text{kích thước của } P) ^ 2 \times (\text{trọng số nh
                                   = (d[v_{i}] ^ 2 + d[v_{j}] ^ 2 + 2 \times d[v_{i}] \times d[v_{j}]) \times mn[v_{i}]$
 
 - $ans[v_{i}]$ sẽ được cộng lên một lượng:
-    - Xét các $j < i$:
-    - $\sum(d[v_{j}]^2 \times mn[v_{j}]) + d[v_{i}]^2 \times \sum mn[v_{j}] + 2 \times d[v_{i}] \times \sum (d[v_{j}] \times mn[v_{j}])$
-    - Xét các $j > i$:
-    - $mn[v_{j}] \times \sum (d[v_{j}]^2) + d[v_{i}]^2 \times mn[v_{i}] \times (n - i) + 2 \times d[v_{i}] \times mn[v_{i}] \times \sum (d[v_{j}])$
-- Các tổng dưới dấu \sum đều có thể tính bằng cách sử dụng tổng tiền tố.
+    - Xét các $j < i$: $\sum(d[v_{j}]^2 \times mn[v_{j}]) + d[v_{i}]^2 \times \sum mn[v_{j}] + 2 \times d[v_{i}] \times \sum (d[v_{j}] \times mn[v_{j}])$
+    - Xét các $j > i$: $mn[v_{j}] \times \sum (d[v_{j}]^2) + d[v_{i}]^2 \times mn[v_{i}] \times (n - i) + 2 \times d[v_{i}] \times mn[v_{i}] \times \sum (d[v_{j}])$
+- Các tổng dưới dấu $\sum$ đều có thể tính bằng cách sử dụng tổng tiền tố.
 
 ![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/11458632-1709-480e-8e34-06fa7c134e6f)
 
