@@ -77,10 +77,8 @@ void dfs(int u, int p = -1, int tans = 0){
 - Độ phức tạp: $O(Q × N)$.
 ```cpp
 // Code chưa xử lí modulo
-
 int ans = 0;
 int dp[N][3];
-
 void dfs(int i, int u, int p = -1){
     dp[u][0] = 1; dp[u][1] = dp[u][2] = (a[u] == i ? 1 : 0);
     for (auto v: adj[u]){
@@ -99,6 +97,12 @@ void dfs(int i, int u, int p = -1){
     }
 }
 ```
+### Subtask 7 (15%): Không có điều kiện gì thêm 
+- Gọi $sz[u]$ là số đỉnh nằm trong cây con gốc $u$.
+- Gọi $contrib(x, y)$ là số lần cặp $(x, y)$ được tính ở $\sum_{u,v} cost_{i}(u, v)$, ta có hai trường hợp:
+   - $x$ và $y$ không phải là tổ tiên của nhau, khi đó $contrib(x, y) = sz[x] × sz[y]$.
+   - $x$ là tổ tiên của $y$ (trường hợp $y$ là tổ tiên của $x$ tương tự), khi đó $contrib(x, y) = (n - sz[jump(x, y)]) × sz[y]$, với $jump(x, y)$ là con trực tiếp của $x$ mà cũng là tổ tiên của $y$.
 
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/67e315c7-dd3b-4253-a6aa-5cf7f0824c03)
 
 
