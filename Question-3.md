@@ -105,4 +105,27 @@ void dfs(int i, int u, int p = -1){
 
 ![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/67e315c7-dd3b-4253-a6aa-5cf7f0824c03)
 
+#### ***Hướng làm 1: Centroid***
+   - Để ý trường hợp 2 ($x$ là tổ tiên của $y$) xử lí khó, nên ta sẽ tìm cách biến đổi hết trường hợp 2 về trường hợp 1 bằng centroid.
+Nhắc lại tính chất centroid: Mọi đường đi $(x, y)$ đều có thể tách thành 2 đường đi nhỏ hơn $(x, r)$ và $(r, y)$, với $r$ là centroid bé nhất mà cây con centroid gốc $r$ chứa cả $x$ và $y$. Vậy nếu ta để $r$ là gốc của cây thì ta sẽ có thể dùng công thức của trường hợp 1 cho đường đi này.
+   - Lưu ý rằng do gốc của cây không cố định, nên ta phải tính hàm $sz(r, u)$ là số đỉnh có màu $i$ nằm trong cây con gốc $u$ với gốc của toàn bộ cây là $r$. Toàn bộ các giá trị này có thể được tính trước trong $O(1)$.
+   - Mỗi lần ta cập nhật giá trị của $A[u]$, ta sẽ bò từ $u$ lên các cha centroid $r$ của nó và cập nhật lại tổng của $sz(r, u) × sz(r, v)$ với các đỉnh $v$ khác cũng nằm trong cây con centroid gốc $r$, và không nằm trong cây con centroid gốc $jump(r, u)$. Kĩ thuật này khá cổ điển, xin nhường lại chi tiết cho bạn đọc.
+   - Độ phức tạp: $O(N \times log N)$.
+#### ***Hướng làm 2: Heavy-Light Decomposition (HLD)***
+   - Mỗi lần ta cập nhật giá trị của $A[u]$, ta sẽ xét các trường hợp của đỉnh $v$:
+       - $v$ là tổ tiên của $u$: Ta cần tính tổng của $sz[jump(u, v)]$ với mọi $v$. Vì hàm $jump$ rất khó xử lí, ta sẽ biến đổi truy vấn cập nhật đỉnh $u$ thành cập nhật toàn bộ các con của $u$, khi đó truy vấn tính tổng sẽ thành tính tổng các đỉnh từ gốc đến $u$. Để cập nhật toàn bộ các con nhanh, ta sẽ dùng HLD: Ta chỉ cập nhật duy nhất con heavy của $u$ vào cấu trúc dữ liệu. Khi tính tổng, các cạnh heavy đã được cập nhật rồi, còn các cạnh light ta có thể duyệt trâu qua (chỉ có $log N$ cạnh light).
+       - Cấu trúc dữ liệu trên cần hỗ trợ truy vấn tính tổng từ đỉnh đến gốc và cập nhật một đỉnh: Fenwick tree trên Euler tour.
+----------------------------------------------------------------------------------------------------------------------------------------
+#### ***Nhận xét***: $cost_{i}(u, v)$ bằng với số cặp đỉnh $(x, y)$ có cùng màu $i$ nằm trên đường đi $(u, v)$.
+
+![image](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/fe186c38-c6b7-416f-90c8-4266ec4158fe)
+
+- Ví dụ ở đường đi $u - w$ có 3 đỉnh cùng màu trên, $W[i] = 3, W[i]^2 = 9$, và cũng có 9 cặp đỉnh $(x, y)$ thoả mãn: $(u, u), (u, v), (u, w), (v, u), (v, v), (v, w), (w, u), (w, v), (w, w)$.
+
+- Sử dụng nhận xét này, thay vì tính trực tiếp $\sum_{u,v} cost_{i}(u, v)$, ta có thể đếm xem mỗi cặp đỉnh $(x, y)$ được tính bao nhiêu lần trong tổng trên (kĩ thuật contribution-to-the-sum).
+----------------------------------------------------------------------------------------------------------------------------------------
+      - u là tổ tiên của v: Ta sẽ làm đối xứng với trường hợp trước: Chỉ cập nhật các cạnh light và chỉ tính tổng của con heavy.
+      - u và v không là tổ tiên của nhau: Nhường làm bài tập cho bạn đọc.
+- Độ phức tạp: $O(N \times log N)$.
+
 
