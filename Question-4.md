@@ -9,13 +9,20 @@
 ![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/7f1c64ac-ff8c-4bea-8be2-d2b513aa194d)
 
 ## Ví dụ minh họa: 
-- N = 3; L1 = 2; L2 = 5; C = 10; D = 4; A = [6, 5, 6]
-   - A = [6, 5, 6] tốn chi phí C = 10
-   - A = [5, 1, 5, 6] tốn chi phí C = 10
-   - A = [5, 1, 4, 1, 6] tốn chi phí D = 4
-   - A = [5, 5, 1, 6] tốn chi phí C = 10
-   - A = [5, 5, 1, 4, 2] tốn chi phí D = 4
-   - A = [5, 5, 5, 2]
-- Tổng chi phí: 10 + 10 + 4 + 10 + 4 = 38
+- $N = 3; L1 = 2; L2 = 5; C = 10; D = 4; A = [6, 5, 6]$
+   - $A = [6, 5, 6]$ tốn chi phí $C = 10$
+   - $A = [5, 1, 5, 6]$ tốn chi phí $C = 10$
+   - $A = [5, 1, 4, 1, 6]$ tốn chi phí $D = 4$
+   - $A = [5, 5, 1, 6]$ tốn chi phí $C = 10$
+   - $A = [5, 5, 1, 4, 2]$ tốn chi phí $D = 4$
+   - $A = [5, 5, 5, 2]$.
+- Tổng chi phí: $10 + 10 + 4 + 10 + 4 = 38$.
 ## Phân tích từng Subtask 
 ### Subtask 1: $L1=L2$
+- Đặt $L = L1 = L2$. 
+- Vì dãy cuối cùng chỉ có một giá trị $L$, ta chỉ cần liên tục ghép hoặc tách phần tử:
+   - Bắt đầu từ đầu dãy, gọi $i$ là vị trí đầu tiên mà $A[i] != L$. 
+        - Nếu $A[i] < L$, ta ghép $A[i]$ với $A[i + 1]$.
+        - Nếu $A[i] > L$, ta tách $A[i]$ thành $L$ và $A[i] - L$.
+   - Thuật toán dừng lại khi $i = n$, lúc này ta chỉ cần kiểm tra xem dãy $A$ có toàn $L$ hay không.
+- Độ phức tạp: $O(N)$
