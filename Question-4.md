@@ -26,3 +26,13 @@
         - Nếu $A[i] > L$, ta tách $A[i]$ thành $L$ và $A[i] - L$.
    - Thuật toán dừng lại khi $i = n$, lúc này ta chỉ cần kiểm tra xem dãy $A$ có toàn $L$ hay không.
 - Độ phức tạp: $O(N)$
+### Subtask 2: Tổng các phần tử của dãy $A ≤ 20$.
+- Đặt $S = \sum A[i]$
+- Vì $S ≤ 20$, ta có thể lưu dãy $A$ dưới dạng dãy nhị phân $S - 1$ bit. Đưa về bài toán trên đồ thị có hướng. Khi đó ta có thể sử dụng thuật toán Dijkstra để tìm chi phí nhỏ nhất. Cách lưu như sau: $A = [4, 3, 2] → o o o o|o o o|o o →  00010010$.
+- Độ phức tạp: $O(2^{S} × S^2)$ với hằng số nhỏ
+
+- Cải tiến: Dùng kĩ thuật BFS với 2 queue, mỗi queue cho một loại trọng số cạnh.
+- Độ phức tạp: $O(2^{S} × S)$
+
+
+
