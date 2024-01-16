@@ -33,6 +33,43 @@
 
 - Cải tiến: Dùng kĩ thuật BFS với 2 queue, mỗi queue cho một loại trọng số cạnh.
 - Độ phức tạp: $O(2^{S} × S)$
+### Subtask 3: $N,L1,L2 ≤ 100,A[i]≤ 100$.
+- Để đơn giản ta sẽ luôn giữ phần thừa của các phần tử phía trước. Khi gặp một phần tử mới ta luôn gộp vào phần thừa, và ta chỉ tách nếu nó tạo ra một phần tử hợp lệ. 
+   - $A = [6, 5, 6]$ còn thừa 0
+   - $A = [6, 5, 6]$ gộp 6 vào phần thừa, còn thừa 6 (không tốn chi phí)
+   - $A = [6, 5, 6]$ cắt ra một đoạn 5, còn thừa 1
+   - $A = [6, 5, 6]$ gộp 5 vào phần thừa, còn thừa 6
+   - $A = [6, 5, 6]$ cắt ra một đoạn 5, còn thừa 1
+   - $A = [6, 5, 6]$ gộp 6 vào phần thừa, còn thừa 7
+   - $A = [6, 5, 6]$ cắt ra một đoạn 5, còn thừa 2
+   - $A = [6, 5, 6]$ cắt ra một đoạn 2, còn thừa 0 (không tốn chi phí)
+- Quy hoạch động: tính $dp[i][r]$ với $i$ là số phần tử đã gộp vào phần thừa và $r$ là độ dài phần còn thừa
+   - $dp[i][r] → dp[i + 1][r + A[i]]$
+   - $dp[i][r] → dp[i][r - L1]$
+   - $dp[i][r] → dp[i][r - L2]$
+   - $dp[0][0] = 0$
+   - --> Kết quả: $dp[n][0]$
+Độ phức tạp $O(N × sum(A[1], …, A[N]))$ hoặc $O(N × max(L1, L2, A[1], …, A[N]))$
+### Subtask 4: $A[i]≤ 2024$.
+- Vì $L1, L2$ lớn nên có thể ta phải gộp nhiều phần tử mới có thể cắt được ra $L1$ hoặc $L2$. 
+- Ví dụ: $A = [1, 2, 4, 1, 2, 2, 1]$, cần cắt ra đoạn độ dài $L1 = 11$. Nếu liên tục gộp thì giá trị chiều $r$ trở nên rất lớn.  
+- Cải tiến Subtask 3: Ta vẫn tính $dp[i][r]$ với $i$ là số phần tử đã gộp vào phần thừa và $r$ là độ dài phần còn thừa, tuy nhiên ta cần tính xem nếu cắt ra được được một phần tử $L1$ hoặc $L2$ thì ta cần phải gộp đến phần tử nào mới có thể cắt được.
+- Cải tiến: $r$ là phần thừa sau khi thực hiện cắt tại ngay tại vị trí $i$, khi đó $r ≤ 2024$. Giả sử cần cắt ra một đoạn độ dài $L1$:
+   - $dp[i][r] → dp[x][r + sum(A[i + 1],..., A[x]) - L1]$ 
+   - Với $x$ là vị trí nhỏ nhất sao cho $r + sum(A[i + 1],..., A[x]) ≥ L1$.
+   - Tương tự với thao tác cắt một đoạn độ dài $L2$.
+- Vị trí $x$ có thể tìm nhanh bằng cách kỹ thuật hai con trỏ.
+- Độ phức tạp: $O(N × max(A[1], …, A[N]))$.
+### Subtask 5,6,7:
+- Không mất tính tổng quát, ta có thể chia bài toán làm hai lượt: tách phần tử, và gộp phần tử. Xét thuật toán không tối ưu sau: 
+   - Nếu ban đầu A có nhiều hơn một phần tử, ta gộp tất cả thành một phần tử. Chi phí là (n - 1) * C 
+   - Lúc này ta chỉ cần tách S thành x phần tử L1 và y phần tử L2, giả sử rằng ta biết x, y tối ưu. Chi phí là (x + y - 1) * D
+- Dễ thấy rằng thuật toán trên chỉ không tối ưu ở chỗ ta gộp toàn bộ các phần tử với nhau mà không quan tâm ở lượt sau có tách ra ở các vị trí ta đã gộp hay không. 
+
+
+
+
+
 
 
 
