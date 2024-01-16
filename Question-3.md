@@ -97,6 +97,8 @@ void dfs(int i, int u, int p = -1){
     }
 }
 ```
+### Subtask 5 (17.5%): Cách làm đã nêu rõ ở bảng trên
+### Subtask 6 (22.5%): Cách làm đã nêu rõ ở bảng trên
 ### Subtask 7 (15%): Không có điều kiện gì thêm 
 - Gọi $sz[u]$ là số đỉnh nằm trong cây con gốc $u$.
 - Gọi $contrib(x, y)$ là số lần cặp $(x, y)$ được tính ở $\sum_{u,v} cost_{i}(u, v)$, ta có hai trường hợp:
