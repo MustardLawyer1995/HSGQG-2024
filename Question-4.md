@@ -100,8 +100,6 @@
     - Giá trị $(x, y)$ trả về của thuật toán Euclid mở rộng trên hai số $a, b$ có thể lên đến $O(max(a, b)) ≈ max(L1, L2) = 109$.
     - Nghiệm Diophantine trả về ở trên có thể lên đến $1013 × 109= 1022 > 264 - 1$.
 - Ý tưởng: Lấy trước $t$ phần tử $L2$ sao cho $S - t \times L2 < 109$, sau đó thêm vào nghiệm với $c = S - t \times L2$.
-- 
-
 
 
 
