@@ -31,7 +31,22 @@ $cost(u, v) = (\text{kích thước của } P) ^ 2 \times (\text{trọng số nh
 - Gọi trọng tâm của cây là đỉnh $c$ và các đỉnh kề với $c$ là $u_{1}, u_{2}, …, u_{k}$. Ta sẽ tính đóng góp của các đường đi qua $c$ vào đáp án của các đỉnh.
 - Ta sử dụng DFS để tính $d[v] = dis(c, v)$ và $mn[v]$ là cạnh nhỏ nhất nằm trên đường đi từ $c$ đến $v$ với mọi đỉnh $v$ nằm trong cây hiện tại.
 
-![image](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/2af42ddd-0c88-41c2-a2a6-0f3108f395da)
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/e2e7071d-0a1e-4112-a9a5-66dbcea12814)
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+- Ta sort các pair $(mn[v], d[v])$ theo thứ tự tăng dần của $mn$ (với $v = c$ ta coi như $mn[v] = \infty \$).
+- Khi đó: $cost(v_{i}, v_{j}) = (d[v_{i}] + d[v_{j}])^2 * mn[v_{i}]
+                                  = (d[v_{i}] ^ 2 + d[v_{j}] ^ 2 + 2 \times d[v_{i}] \times d[v_{j}]) \times mn[v_{i}]$
+
+- $ans[v_{i}]$ sẽ được cộng lên một lượng:
+    - Xét các j < i:
+    - \sum(d[v_{j}]^2 \times mn[v_{j}]) + d[v_{i}]^2 \times \sum mn[v_{j}] + 2 \times d[v_{i}] \times \sum (d[v_{j}] \times mn[v_{j}])
+Xét các j > i:
+  mn[v_j] * ∑(d[v_j]^2) + d[v_i]^2 * mn[v_i] * (n - i) + 2*d[v_i] * mn[v_i] * ∑(d[v_j])
+
+Các tổng dưới dấu ∑ đều có thể tính bằng cách sử dụng tổng tiền tố.
+![image](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/e1b4117d-9d47-40ad-a746-bfe30787bf9a)
+
 
 
 
