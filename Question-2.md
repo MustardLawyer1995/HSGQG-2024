@@ -5,3 +5,10 @@
 - $2 \le N \le {10^5},1 \le M,P \le {10^5},W\left[ i \right] \le {10^9}$
 - Khi ấy ta có bảng biểu diễn chi tiết như sau:
   ![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/080180db-a7fe-42b4-bc35-348217edc98c)
+## Phân tích từng Subtask
+### Subtask 1: $M,P \le 1000$
+- Với mỗi phương án cải tạo, ta thực hiện thuật toán đường đi ngắn nhất - Dijkstra từ hai thành phố 1 và 2 để tìm đường đi ngắn nhất tới mọi thành phố còn lại. Khi đã có khoảng cách ngắn nhất tới mỗi thành phố, để tính hạng của thành phố $U[T_{j}]$ và $V[T_{j}]$, ta xét lần lượt từng thành phố và kiểm tra xem thành phố này có tốt hơn hoặc tương đương hai thành phố trong phương án cải tạo không.
+- Độ phức tạp: $O\left( {P \times \left( {M\log N + N} \right)} \right)$
+### Subtask 4: $M=N-1$
+
+
