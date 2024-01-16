@@ -115,6 +115,8 @@ Nhắc lại tính chất centroid: Mọi đường đi $(x, y)$ đều có th�
    - Mỗi lần ta cập nhật giá trị của $A[u]$, ta sẽ xét các trường hợp của đỉnh $v$:
        - $v$ là tổ tiên của $u$: Ta cần tính tổng của $sz[jump(u, v)]$ với mọi $v$. Vì hàm $jump$ rất khó xử lí, ta sẽ biến đổi truy vấn cập nhật đỉnh $u$ thành cập nhật toàn bộ các con của $u$, khi đó truy vấn tính tổng sẽ thành tính tổng các đỉnh từ gốc đến $u$. Để cập nhật toàn bộ các con nhanh, ta sẽ dùng HLD: Ta chỉ cập nhật duy nhất con heavy của $u$ vào cấu trúc dữ liệu. Khi tính tổng, các cạnh heavy đã được cập nhật rồi, còn các cạnh light ta có thể duyệt trâu qua (chỉ có $log N$ cạnh light).
        - Cấu trúc dữ liệu trên cần hỗ trợ truy vấn tính tổng từ đỉnh đến gốc và cập nhật một đỉnh: Fenwick tree trên Euler tour.
+       - $u$ là tổ tiên của $v$: Ta sẽ làm đối xứng với trường hợp trước: Chỉ cập nhật các cạnh light và chỉ tính tổng của con heavy.
+       - $u$ và $v$ không là tổ tiên của nhau: Nhường làm bài tập cho bạn đọc.
 ----------------------------------------------------------------------------------------------------------------------------------------
 #### ***Nhận xét***: $cost_{i}(u, v)$ bằng với số cặp đỉnh $(x, y)$ có cùng màu $i$ nằm trên đường đi $(u, v)$.
 
@@ -124,8 +126,7 @@ Nhắc lại tính chất centroid: Mọi đường đi $(x, y)$ đều có th�
 
 - Sử dụng nhận xét này, thay vì tính trực tiếp $\sum_{u,v} cost_{i}(u, v)$, ta có thể đếm xem mỗi cặp đỉnh $(x, y)$ được tính bao nhiêu lần trong tổng trên (kĩ thuật contribution-to-the-sum).
 ----------------------------------------------------------------------------------------------------------------------------------------
-      - u là tổ tiên của v: Ta sẽ làm đối xứng với trường hợp trước: Chỉ cập nhật các cạnh light và chỉ tính tổng của con heavy.
-      - u và v không là tổ tiên của nhau: Nhường làm bài tập cho bạn đọc.
+
 - Độ phức tạp: $O(N \times log N)$.
 
 
