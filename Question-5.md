@@ -1,4 +1,4 @@
-# Câu 5: Mạng truyển tin
+# Câu 5: Mạng truyền tin
 - Tóm tắt đề bài: Cho một cây $N$ đỉnh, cạnh thứ $i$ có trọng số là $w_i$. Xét hai đỉnh $u$ và $v$, gọi $P$ là tập hợp các cạnh nằm trên đường đi ngắn nhất từ $u$ đến $v$, ta định nghĩa:
 $cost(u, v) = (\text{kích thước của } P) ^ 2 \times (\text{trọng số nhỏ nhất của các cạnh trong } P)$
 - Yêu cầu: Với mỗi đỉnh gốc $r$, tính tổng $cost(r, 1) + cost(r, 2) + … + cost(r, N)$ modulo 998244353.
@@ -30,22 +30,25 @@ $cost(u, v) = (\text{kích thước của } P) ^ 2 \times (\text{trọng số nh
 - Gọi $ans[u]$ là đáp án cần tính của đỉnh u.
 - Gọi trọng tâm của cây là đỉnh $c$ và các đỉnh kề với $c$ là $u_{1}, u_{2}, …, u_{k}$. Ta sẽ tính đóng góp của các đường đi qua $c$ vào đáp án của các đỉnh.
 - Ta sử dụng DFS để tính $d[v] = dis(c, v)$ và $mn[v]$ là cạnh nhỏ nhất nằm trên đường đi từ $c$ đến $v$ với mọi đỉnh $v$ nằm trong cây hiện tại.
-
-![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/e2e7071d-0a1e-4112-a9a5-66dbcea12814)
------------------------------------------------------------------------------------------------------------------------------------------
+  
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/9f0676e9-e707-4a5f-a286-a444bc88a4d9)
 
 - Ta sort các pair $(mn[v], d[v])$ theo thứ tự tăng dần của $mn$ (với $v = c$ ta coi như $mn[v] = \infty \$).
-- Khi đó: $cost(v_{i}, v_{j}) = (d[v_{i}] + d[v_{j}])^2 * mn[v_{i}]
+- Khi đó: $cost(v_{i}, v_{j}) = (d[v_{i}] + d[v_{j}])^2 \times mn[v_{i}]
                                   = (d[v_{i}] ^ 2 + d[v_{j}] ^ 2 + 2 \times d[v_{i}] \times d[v_{j}]) \times mn[v_{i}]$
 
 - $ans[v_{i}]$ sẽ được cộng lên một lượng:
     - Xét các j < i:
-    - \sum(d[v_{j}]^2 \times mn[v_{j}]) + d[v_{i}]^2 \times \sum mn[v_{j}] + 2 \times d[v_{i}] \times \sum (d[v_{j}] \times mn[v_{j}])
-Xét các j > i:
-  mn[v_j] * ∑(d[v_j]^2) + d[v_i]^2 * mn[v_i] * (n - i) + 2*d[v_i] * mn[v_i] * ∑(d[v_j])
+    - $\sum(d[v_{j}]^2 \times mn[v_{j}]) + d[v_{i}]^2 \times \sum mn[v_{j}] + 2 \times d[v_{i}] \times \sum (d[v_{j}] \times mn[v_{j}])$
+    - Xét các j > i:
+    - $mn[v_{j}] \times \sum (d[v_{j}]^2) + d[v_{i}]^2 \times mn[v_{i}] \times (n - i) + 2 \times d[v_{i}] \times mn[v_{i}] \times \sum (d[v_{j}])$
+- Các tổng dưới dấu \sum đều có thể tính bằng cách sử dụng tổng tiền tố.
 
-Các tổng dưới dấu ∑ đều có thể tính bằng cách sử dụng tổng tiền tố.
-![image](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/e1b4117d-9d47-40ad-a746-bfe30787bf9a)
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/11458632-1709-480e-8e34-06fa7c134e6f)
+
+- Suy ra ta tính thừa các cặp $(v_{i}, v_{j})$ cùng nằm trong một nhánh so với gốc $c$ (như hình vẽ).
+- Để trừ các phần thừa này, ta xét các đỉnh $v$ nằm trong cùng một nhánh và sử dụng cách thức tương tự như phần trước, thay việc cộng vào bằng việc trừ đi.
+- Sau khi tính toán xong cho gốc $c$ ta đệ quy vào các cây con $u_{i}$ và áp dụng thuật toán tương tự (chính là ý tưởng của centroid decomp).
 
 
 
