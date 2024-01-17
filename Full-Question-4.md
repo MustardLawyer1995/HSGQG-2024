@@ -15,7 +15,7 @@
 
 ![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/326f8ef3-b38a-42e2-9a11-d65359075872)
 
-
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/9b167569-358f-4788-b1e6-4af3a6cc4ab1)
 
 ### Ràng buộc:  
 
