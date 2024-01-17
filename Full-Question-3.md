@@ -16,3 +16,11 @@
 - (5) 17.5% số test khác ứng với 17.5% số điểm thỏa mãn: Luôn tồn tại một con đường nối ngôi làng thứ $i$ và ngôi làng thứ $[\frac{i}{2}]$, $\forall i = 2,3,....N$ , với $[\frac{i}{2}]$ là số nguyên lớn nhất không vượt quá $\frac{i}{2}$ .
 - (6) 22.5% số test khác ứng với 22.5% số điểm thỏa mãn: Luôn tồn tại một con đường nối ngôi làng thứ $i$ và ngôi làng thứ $i-1$ , $\forall i = 2,3,....N$
 - (7) 15% số test còn lại ứng với 15% số điểm: Không có ràng buộc gì thêm
+### Ví dụ: 
+
+### Giải thích: 
+- Trong năm nay, các ngôi làng thứ 1,2,3,4,5 lần lượt sản xuất các loại nông sản thứ 1,1,1,2,3. Có tất cả $\frac{5 \times (5-1)}{2} = 10$ xe tải với các lộ trình vận chuyển và chi phí như sau:
+
+
+
+- Tổng chi phí  
