@@ -5,7 +5,12 @@
 - Việc vận chuyển nông sản luôn phát sinh chi phí. Tùy theo đặc tính, chi phí vận chuyển từng loại nông sản có thể khác nhau. Theo tính toán của chính phủ, nếu trong toàn bộ hành trình, một xe tải thu mua được khối lượng nông sản các loại thứ $1,2, \ldots, K$ tương ứng là $W_{1}, W_{2}, \ldots, W_{K}$ tấn, chi phí vận chuyển của xe này là $C_{1} \times W_{1}^{2}+C_{2} \times W_{2}^{2}+\ldots+C_{K} \times W_{K}^{2}$, trong đó $C_{1}, C_{2}, \ldots, C_{K}$ tương ứng là hệ số chi phí vận chuyến cưa $K$ loại nờng sẳn thứ $1,2, \ldots, K$. Chính phủ sẽ tài trợ toàn bộ chi phí vận chuyển, nên cần biết tổng chi phí của tất cả $\frac{N \times(N-1)}{2}$ xe tải này.  
 - Ngoài ra, với niềm tin rằng nền nông nghiệp còn phát triển mạnh trong nhiều năm về sau, chính phủ muốn dự trù chi phí vận chuyển nông sản cho những năm tiếp theo. Theo kế hoạch canh tác trong $Q$ năm tiếp theo, vào năm thứ $j$ $(1 \leq j \leq Q)$ ngôi làng thứ $T_{j}$ sẽ chuyển qua sản xuất loại nông sản thứ $B_{j}$, trong khi $N-1$ ngôi làng còn lại sẽ tiếp tục canh tác loại nông sản như năm thứ $j-1$ (năm nay được coi là năm thứ 0). Vơi mỗi năm, chính phủ muốn biết tổng chi phí vận chuyển nông sản nếu tiếp tục bố trí các xe tải thu mua như phương án ở trên. (truy vấn có degenerate)
 - **Yêu cầu:** Hãy viết chương trình tính tổng chi phí vận chuyển nông sản của chính phủ trong năm nay và trong $Q$ năm tiếp theo, dựa trên kế hoạch thay đổi canh tác.
-### Dữ liệu: Vào từ file văn bản FBUY.INP
+### Dữ liệu: Vào từ file văn bản FBUY.INP:
+- Dòng đầu chứa ba số nguyên $N,K$ và $Q$ lần lượt là số ngôi làng của quốc gia Delta, số loại nông sản được sản xuất tại dãy và số năm trong kế hoạch canh tác: $1 \le K \le 20,1 \le N,Q \le 2 \times {10^5}$
+- Dòng thứ hai chứa $N$ số nguyên $A_{1}, A_{2},..., A_{N}$ thể hiện loại nông sản chuyên được sản xuất tại các ngôi làng trong năm nay: $1 \le {A_i} \le K,\forall i = 1,2,...,N$ .
+- Dòng thứ ba chứa $K$ số nguyên $C_{1}, C_{2},..., C_{K}$ là hệ số chi phí vận chuyển của các loại nông sản: $1 \le {C_i} \le {10^9},\forall i = 1,2,...,K$ .
+- Mỗi dòng trong số $N-1$ dòng tiếp theo chứa hai số nguyên $T_{j}$ và $B_{j}$ với ý nghĩa: Vào năm thứ $j$ trong $Q$ năm tiếp theo, ngôi làng thứ $T_{j}$ sẽ chuyển sang sản xuất loại nông sản thứ $B_{j}$: $1 \le {T_j} \le N,1 \le B_{j} \le K$ .
+### Kết quả: Ghi ra file văn bản FBUY.OUT:
 - Dòng đầu chứa một số nguyên là phần dư của tổng chi phí vận chuyển nông sản trong năm nay trong phép chia cho 998244353.
 - Dòng thứ $j$ trong số $Q$ dòng còn lại chứa một số nguyên là phần dư của tổng chi phí vận chuyển nông sản trong năm thứ $j$ trong phép chia với 998244353.
 ### Ràng buộc: 
