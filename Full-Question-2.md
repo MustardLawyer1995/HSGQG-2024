@@ -21,6 +21,7 @@ R(X)=\mid\{Y \in\{1,2, \ldots, N\}: D(Y, 1) \leq D(X, 1) \text { và } D(Y, 2) \
    - (5) 20% số test còn lại ứng với 20% số điểm: Không có ràng buộc gì thêm.
 ### Ví dụ:
 
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/b07556a4-3e4c-4b4f-8e30-dbbdd566fe72)
 
 
 
