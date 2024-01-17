@@ -26,7 +26,11 @@
 ### Ví dụ: 
 
 ### Ràng buộc: 
-
+- (1) Có 17.5% số test ứng với 17.5% số điểm thỏa mãn: $M \le 12$ và $Q \le 2024$ .
+- (2) 22.5% số test khác ứng với 20% số điểm thỏa mãn: $X_{i}=Y_{i}=1, \forall i =1,2,...Q$ .
+- (3) 22.5% số test khác ứng với 22.5% số điểm thỏa mãn: $L_{i}=1 ; R_{i}=M$ và $X_{i}, Y_{i} \le 10^{5} , \forall i =1,2,...Q$ .
+- (4) 22.5% số test khác ứng với 22.5% số điểm thỏa mãn: $M \le 2000$ và $Q \le 20000$ .
+- (5) 17.5% số test còn lại ứng với 17.5% số điểm: không có ràng buộc gì thêm. 
 
 
 
