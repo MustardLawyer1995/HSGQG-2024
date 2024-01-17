@@ -12,3 +12,20 @@
 ### Kết quả: WPRO.OUT
 - Ghi ra file văn bản WPRO.OUT một số nguyên là tổng chi phí dùng cho việc cắt và dán tìm được
 ### Ví dụ: 
+
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/326f8ef3-b38a-42e2-9a11-d65359075872)
+
+
+
+### Ràng buộc:  
+
+
+
+
+
+
+
+
+
+
+
