@@ -23,12 +23,12 @@
 - (7) 15% số test còn lại ứng với 15% số điểm: Không có ràng buộc gì thêm
 ### Ví dụ: 
 
-
+![image](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/0f9a77ed-cc18-4c59-baef-9f740c230bc4)
 
 ### Giải thích: 
 - Trong năm nay, các ngôi làng thứ 1,2,3,4,5 lần lượt sản xuất các loại nông sản thứ 1,1,1,2,3. Có tất cả $\frac{5 \times (5-1)}{2} = 10$ xe tải với các lộ trình vận chuyển và chi phí như sau:
 
-
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/d277d578-344b-4b2f-95b0-04cc5a82ec44)
 
 - Tổng chi phí vận chuyển của các xe là: $8+18+11+7+8+5+13+11+23+16=120$ .
 - Theo kế hoạch canh tác các năm tiếp theo:
