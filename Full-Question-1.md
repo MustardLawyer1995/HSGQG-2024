@@ -19,12 +19,12 @@
 ![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/69e73838-4435-4647-8fd2-eefc7ecab058)
 
 ### Ràng buộc: 
-   - (1) Có $20 \%$ số test ứng với $20 \%$ số điểm thỏa mãn: $N, M, Q \leq 40$ và $\mathcal{T}=1$.  
-   - (2) $20 \%$ số test khác ứng với $20 \%$ số điểm thỏa mān: $N, M, Q \leq 100$ và $\mathcal{T}=1$.  
-   - (3) $20 \%$ số test khác ứng với $20 \%$ số điểm thỏa mãn: $N, M, Q \leq 500$ và $\mathcal{T}=1$.  
-   - (4) $20 \%$ số test khác ứng với $20 \%$ số điểm thỏa mãn: $M, Q \leq 1000$ và $\Sigma M, \Sigma Q \leq 2000$.  
-   - (5) $10 \%$ số test khác ứng với $10 \%$ số điểm thỏa mãn: $M \leq 1000$ và $\Sigma M \leq 2000$.  
-   - (6) $10 \%$ số test còn lại ứng với $10 \%$ số điểm: Không có ràng buộc gì thêm.
+   - (1) Có 20% số test ứng với 20% số điểm thỏa mãn: $N, M, Q \leq 40$ và $\mathcal{T}=1$.  
+   - (2) 20% số test khác ứng với 20% số điểm thỏa mān: $N, M, Q \leq 100$ và $\mathcal{T}=1$.  
+   - (3) 20% số test khác ứng với 20% số điểm thỏa mãn: $N, M, Q \leq 500$ và $\mathcal{T}=1$.  
+   - (4) 20% số test khác ứng với 20% số điểm thỏa mãn: $M, Q \leq 1000$ và $\Sigma M, \Sigma Q \leq 2000$.  
+   - (5) 10% số test khác ứng với 10% số điểm thỏa mãn: $M \leq 1000$ và $\Sigma M \leq 2000$.  
+   - (6) 10% số test còn lại ứng với 10% số điểm: Không có ràng buộc gì thêm.
 
 
 
