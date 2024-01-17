@@ -18,9 +18,15 @@
 - (7) 15% số test còn lại ứng với 15% số điểm: Không có ràng buộc gì thêm
 ### Ví dụ: 
 
+
+
 ### Giải thích: 
 - Trong năm nay, các ngôi làng thứ 1,2,3,4,5 lần lượt sản xuất các loại nông sản thứ 1,1,1,2,3. Có tất cả $\frac{5 \times (5-1)}{2} = 10$ xe tải với các lộ trình vận chuyển và chi phí như sau:
 
 
 
-- Tổng chi phí  
+- Tổng chi phí vận chuyển của các xe là: $8+18+11+7+8+5+13+11+23+16=120$ .
+- Theo kế hoạch canh tác các năm tiếp theo:
+    - Trong năm thứ $1$, các ngôi làng thứ 1,2,3,4,5 sẽ lần lượt sản xuất các loại nông sản thứ 1,3,1,2,3. Số lượng xe và lộ trình di chuyển các xe vẫn giống như ở trên, nhưng tổng chi phí vận chuyển các xe là: $7+13+10+7+7+8+22+10+28+25=137$ .
+    - Trong năm thứ $2$, các ngôi làng thứ 1,2,3,4,5 sẽ lần lượt sản xuất các loại nông sản thứ 1,3,2,2,3. Số lượng xe và lộ trình di chuyển các xe vẫn giống như ở trên, nhưng tổng chi phí vận chuyển các xe là: $7+10+10+7+8+8+22+17+25+25=139$ .
+  
