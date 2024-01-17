@@ -98,7 +98,7 @@
 - Xử lý tràn số: (subtask 6, 7) 
     - Do $A ≤ 109, N ≤ 104$, tổng của một dãy có thể lên đến 1013. 
     - Giá trị $(x, y)$ trả về của thuật toán Euclid mở rộng trên hai số $a, b$ có thể lên đến $O(max(a, b)) ≈ max(L_{1}, L_{2}) = 109$.
-    - Nghiệm Diophantine trả về ở trên có thể lên đến $1013 × 109= 1022 > 264 - 1$.
+    - Nghiệm Diophantine trả về ở trên có thể lên đến $10^{13} × 10^{9}= 10^{22} > 2^{64} - 1$.
 - Ý tưởng: Lấy trước $t$ phần tử $L2$ sao cho $S - t \times L_{2} < 109$, sau đó thêm vào nghiệm với $c = S - t \times L_{2}$.
 
 
