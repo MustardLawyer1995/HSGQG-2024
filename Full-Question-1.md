@@ -15,6 +15,7 @@
    - Dòng thứ nhất ghi ra một số nguyên dương là tổng công suất lớn nhất tìm được với hiện trạng trang trại ban đầu.  
    - Dòng thứ $j$ trong số $Q$ dòng tiếp theo ghi ra tổng công suất lớn nhất tìm được với phương án điều chỉnh thứ $j$.
 ### Ví dụ: 
+
 ### Ràng buộc: 
    - (1) Có $20 \%$ số test ứng với $20 \%$ số điểm thỏa mãn: $N, M, Q \leq 40$ và $\mathcal{T}=1$.  
    - (2) $20 \%$ số test khác ứng với $20 \%$ số điểm thỏa mān: $N, M, Q \leq 100$ và $\mathcal{T}=1$.  
