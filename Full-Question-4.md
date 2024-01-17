@@ -18,8 +18,13 @@
 ![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/9b167569-358f-4788-b1e6-4af3a6cc4ab1)
 
 ### Ràng buộc:  
-
-
+- (1) Có 16% số test ứng với 16% số điểm thỏa mãn: $L_{1}=L_{2}$ .
+- (2) 16% số test khác ứng với 16% số điểm thỏa mãn: $\sum _ {i \to N} A_{i} \le 20$ .
+- (3) 16% số test khác ứng với 16% số điểm thỏa mãn: $N,L_{1},L_{2} \le 100$ và $A_{i} \le 100, \forall i = 1,2,...N$ 
+- (4) 16% số test khác ứng với 16% số điểm thỏa mãn: $A_{i} \le 2024, \forall i = 1,2,...N$
+- (5) 12% số test khác ứng với 12% số điểm thỏa mãn: $L_{1},L_{2} \le 2024$
+- (6) 12% số test khác ứng với 12% số điểm thỏa mãn: $L_{1} \le 2024$
+- (7) 12% số test còn lại ứng với 12% số điểm: Không có ràng buộc gì thêm. 
 
 
 
