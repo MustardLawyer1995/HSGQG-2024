@@ -25,6 +25,8 @@
 - Gồm $Q$ dòng, trong đó dòng thứ $i$ chứa một số nguyên là độ dài tiền tố chung dài nhất của hai dãy mã hóa phân đoạn của dãy $C' = \left[ {{C_{{L_i}}},{C_{{L_i} + 1}},....,{C_{{R_i}}}} \right]$ , với dãy mã hóa thứ nhất có thứ tự từ điển ngược bằng $X_{i}$ và dãy mã hóa thứ hai có thứ tự từ điển ngược bằng $Y_{i}$ .
 ### Ví dụ: 
 
+![image](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/be88393a-b67b-463a-9539-fca3be5d0377)
+
 ### Ràng buộc: 
 - (1) Có 17.5% số test ứng với 17.5% số điểm thỏa mãn: $M \le 12$ và $Q \le 2024$ .
 - (2) 22.5% số test khác ứng với 20% số điểm thỏa mãn: $X_{i}=Y_{i}=1, \forall i =1,2,...Q$ .
