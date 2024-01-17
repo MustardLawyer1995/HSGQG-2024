@@ -15,34 +15,7 @@
    - Dòng thứ nhất ghi ra một số nguyên dương là tổng công suất lớn nhất tìm được với hiện trạng trang trại ban đầu.  
    - Dòng thứ $j$ trong số $Q$ dòng tiếp theo ghi ra tổng công suất lớn nhất tìm được với phương án điều chỉnh thứ $j$.
 ### Ví dụ:
-<table style="border-collapse: collapse; margin: auto;">
-  <tr>
-    <td style="border: 1px solid black; text-align: center;">
-      <div style="text-align: center;">
-        <!-- First 5x5 Nested Table -->
-        <table style="border-collapse: collapse; margin: auto;">
-          <!-- Each row -->
-          <tr><td style="border: 1px solid black; width: 30px; height: 30px;">1</td>
-              <td style="border: 1px solid black; width: 30px; height: 30px;"></td>
-              <td style="border: 1px solid black; width: 30px; height: 30px;"></td>
-              <td style="border: 1px solid black; width: 30px; height: 30px;"></td>
-              <td style="border: 1px solid black; width: 30px; height: 30px;">5</td></tr>
-          <tr><!-- ... --></tr>
-          <!-- Repeat <tr> 5 times entirely with <td>s to make a 5x5 table... -->
-        </table>
-        <!-- Space between the two tables -->
-        <div style="height: 10px;"></div>
-        <!-- Second 5x5 Nested Table -->
-        <table style="border-collapse: collapse; margin: auto;">
-          <!-- Repeat the structure of the first 5x5 nested table -->
-          <tr><td style="border: 1px solid black; width: 30px; height: 30px;"></td> <!-- Repeat <td> 5 times... --></tr>
-          <tr><!-- ... --></tr>
-          <!-- Repeat <tr> 5 times entirely with <td>s to make a 5x5 table... -->
-        </table>
-      </div>
-    </td>
-  </tr>
-</table>
+
 ### Ràng buộc: 
    - (1) Có $20 \%$ số test ứng với $20 \%$ số điểm thỏa mãn: $N, M, Q \leq 40$ và $\mathcal{T}=1$.  
    - (2) $20 \%$ số test khác ứng với $20 \%$ số điểm thỏa mān: $N, M, Q \leq 100$ và $\mathcal{T}=1$.  
