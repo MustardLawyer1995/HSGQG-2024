@@ -10,9 +10,12 @@
 - Gồm $N$ dòng, trong đó dòng thứ $r$ chứa một số nguyên là phần dư của chi phí vận hành mạng nếu chọn máy tính $r$ làm máy chủ trong phép chia cho 998244353.
 ### Ví dụ: 
 
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/2fa96fcb-23a8-4d34-b547-f83b2c44a102)
 
 ### Giải thích: 
 - Chi phí truyền tin tối đa giữa tất cả các cặp máy tính được cho trong bảng sau:
+
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/094fcf0f-b0f5-4149-b6d5-ad27a54fb98f)
 
 - Có 4 dây cáp trên đường truyền tin giữa máy tính 3 và máy tính 7 với giới hạn truyền tải là 2,3,2,2 vì vậy $C_{min} (3,7) = 2$ và $D(3,7)=4$ . Chi phí truyền tin tối đa giữa 3 và 7 là $2 \times 4^{2} = 32$ , do đó số ở vị trí tương ứng với $r=3$ và $x=7$ trong bảng trên là 32.
 - Chi phí vận hành nếu chọn máy tính 4 làm máy chủ là $8+2+18+1+4+2=35$ , do đó số ở cột cuối cùng ứng với $r=4$ trong bảng trên là 35.
