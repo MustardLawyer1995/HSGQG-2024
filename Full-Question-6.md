@@ -2,10 +2,22 @@
 - Cô Tuyết chuẩn bị một bài tập đặc biệt dành cho các bạn trong đội tuyển học sinh giỏi vào giáng sinh năm nay. Đó là một bài tập về thứ tự từ điển với đề bài như sau:
 - Cho một dãy số khác rỗng $C=[C_{1}, C_{2}... C_{M}]$ thỏa mãn ${C_i} \ne {C_{i - 1}},\forall i = 2,3,...M$ . Ta gọi một cách *phân đoạn đáy* là một cách chia dãy thành các đoạn con chứa các phần tử liên tiếp, mà mỗi phần tử đều thuộc đúng một đoạn con. Một cách phân đoạn dãy được coi là *hợp lệ*  nếu mỗi đoạn con chỉ chứa các phần tử đôi một phân biệt.
 - Ví dụ, với $M=10$ và dãy $C=[1,2,4,3,2,1,2,8,6,8]$ thì một cách phân đoạn dãy hợp lệ là chia dãy $C$ thành 4 đoạn con lần lượt là $[1,2,4,3],[2,1],[2,8],[6,8]$ .
+
+![image](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/4602f8af-31c9-415e-84d7-6b56326c9233)
+
 - Một cách phân đoạn hợp lệ khác là chia dãy $C$ thành 5 đoạn con lần lượt là $[1,2,4], [3,2,1], [2,8], [6], [8]$ .
+
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/b63f87ae-54fd-4a8f-a7cd-ee2b8f064d97)
+  
 - Cả hai cách phân đoạn dãy trên đều thỏa mãn mọi đoạn con chỉ chứa các phần tử đôi một phân biệt. Mặt khác, nếu ta chia dãy $C$ thành 4 đoạn con lần lượt là $[1], [2,4,3,2,1,2], [8], [6], [8]$ thì cũng không hợp lệ bởi có ba phần tử cùng bằng 2 trong đoạn con thứ hai.
 - Mỗi dãy có thể có nhiều cách phân đoạn dãy hợp lệ. Mỗi cách phân đoạn dãy được mã hóa bằng một *mã hóa phân đoạn* $A=[A_{1}, A_{2}, ....,A_{K}]$ , với $K$ là số lượng đoạn con, và $A_{i}$ là số lượng phần tử của đoạn con thứ $i$. Chẳng hạn, với $M=10$ và dãy $C=[1,2,4,3,2,1,8,6,8]$ thì cách phân đoạn dãy trong hình đầu tiên sẽ được mã hóa bằng dãy $A=[4,2,2,2]$ .
+
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/34908f0d-ec58-4a9d-8711-348a5849d9c4)
+
 - Tương tự, cách phân đoạn dãy trong hình thứ hai sẽ được mã hóa thành dãy $A=[3,3,2,1,1]$ .
+
+![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/057f1819-816d-45a4-83a6-030205e831c4)
+
 - Cô Tuyết viết lên bảng một dãy số khác rỗng $C=[C_{1}, C_{2}... C_{M}]$ thỏa mãn ${C_i} \ne {C_{i - 1}},\forall i = 2,3,...M$ , rồi lại viết lên bảng thêm hai số nguyên dương $X$ và $Y$ . Sau đó gọi một bạn lên bảng để trả lời câu hỏi sau:
 - "Khi liệt kê tất cả các dãy mã hóa phân đoạn của dãy $C$ rồi sắp xếp chúng theo thứ tự từ điển ngược thì dãy mã hóa phân đoạn thứ $X$ và dãy mã hóa phân đoạn thứ $Y$ có độ dài tiền tố chung dài nhất là bao nhiêu ?" .
     - Nhắc lại (1): Một dãy mã hóa phân đoạn $U=[U_{1}, U_{2}, .... U_{K}]$ gọi là đi trước dãy mã hóa phân đoạn $V=[V_{1}, V_{2}, .... V_{H}]$ theo *thứ tự từ điển ngược* nếu thỏa mãn một trong hai điều kiện sau:
