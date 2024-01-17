@@ -14,8 +14,12 @@ R(X)=\mid\{Y \in\{1,2, \ldots, N\}: D(Y, 1) \leq D(X, 1) \text { và } D(Y, 2) \
 ### Kết quả: Ghi ra file văn bản IMPEVAL.OUT
 - Gồm $P$ dòng, trong đó dòng thứ $j$ ghi ra hai số nguyên $R\left(U_{T_{j}}\right)$ và $R\left(V_{T_{j}}\right)$ tương ứng là hạng của thành phố $U_{T_{j}}$ và thành phố $V_{T_{j}}$ nếu phương án thứ $j$ được triển khai.
 ### Ràng buộc: 
-
-
+   - (1) Có 20% số test ứng với 20% số điểm thỏa mãn: $M, P \leq 1000$.
+   - (2) 20% số test khác ứng với 20% số điểm thỏa mān: Mỗi thành phố có nhiều nhất 2 con đường nối với thành phố khác.
+   - (3) 20% số test khác ứng với 20% số điểm thỏa mãn: Mọi con đường đều nối với thành phố số 1 hoặc thành phố số 2.
+   - (4) 20% số test khác ứng với 20% số điểm thỏa mãn: $M=N-1$.   
+   - (5) 20% số test còn lại ứng với 20% số điểm: Không có ràng buộc gì thêm.
+### Ví dụ:
 
 
 
