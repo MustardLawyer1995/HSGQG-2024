@@ -61,8 +61,8 @@
 ![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/d157bdf0-2b23-480e-9f15-ae5fc63cbbba)
 
 ### Subtask 2,3,5: 
-- Thực hiện dijkstra từ hai đỉnh 1, 2 để tính khoảng cách ngắn nhất tới mọi đỉnh còn lại. 
-- Khi con đường nối giữa hai đỉnh U, V được cải tạo, ta có:
+- Thực hiện thuật toán dijkstra từ hai đỉnh 1, 2 để tính khoảng cách ngắn nhất tới mọi đỉnh còn lại. 
+- Khi con đường nối giữa hai đỉnh $U, V$ được cải tạo, ta có:
    - $D(U, 1) = min(D(U, 1), D(V, 1) + W’(U, V))$.
    - $D(U, 2) = min(D(U, 2), D(V, 2) + W’(U, V))$.
    - $D(V, 1) = min(D(V, 1), D(U, 1) + W’(U, V))$.
