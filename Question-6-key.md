@@ -1,7 +1,7 @@
 # Câu 6: Bài tập đêm Giáng Sinh
 ## Tóm tắt đề bài: 
 - Cho dãy số $C[1], C[2], ..., C[n]$ thoả mãn $C[i]$ khác $C[i+1]$ với mọi $i$.
-- Có $Q$ truy vấn dạng $L$ $R$ $X$ $Y$
+- Có $Q$ truy vấn dạng $L$, $R$, $X$, $Y$
 - Xét các cách chia dãy $C[L..R]$ làm các đoạn liên tiếp không có phần tử lặp
 - Tìm cách chia có thứ tự từ điển lớn thứ X và lớn thứ Y
 - In ra tiền tố chung dài nhất của hai dãy
