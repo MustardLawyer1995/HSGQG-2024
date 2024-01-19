@@ -1,7 +1,7 @@
 # Câu 4: Sản xuất gỗ
 - Tóm tắt bài toán: Cho dãy $A$ gồm $N$ số $A[1], A[2], A[3], …, A[N]$. Có hai loại thao tác:
    - Chọn một số $x$ trong dãy, chọn hai số nguyên dương $y$ và $z$ sao cho $x = y + z$. Thực hiện xóa $x$ khỏi dãy, sau đó thêm $y$ và $z$ vào vị trí vừa xóa, đồng thời giữ nguyên thứ tự các phần tử còn lại của dãy. Thao tác này tốn chi phí $C$.
-   - Chọn hai số $x$ và $y$ liền kề trong dãy. Thực hiện xóa $x$ và $y$ khỏi dãy, sau đó thêm $z = x + y$ vào vị trí vừa xóa, đồng thời giữ
+   - Chọn hai số $x$ và $y$ liền kề trong dãy. Thực hiện xóa $x$ và $y$ khỏi dãy, sau đó thêm $z = x + y$ vào vị trí vừa xóa, đồng thời giữ nguyên thứ tự các phần tử còn lại của dãy. Thao tác này tốn chi phí $D$.
 - Yêu cầu bài toán: Tìm chi phí nhỏ nhất để biến đổi dãy $A$ sao cho $A$ chỉ chứa $L_{1}$ và $L_{2}$. 
 ## Phân tích ràng buộc bài toán
 - $1 \le N \le {10^4},1 \le L_{1},L_{2} \le {10^9},1 \le C,D \le {10^5},1 \le A\left[ i \right] \le {10^9}$
@@ -45,8 +45,8 @@
    - $A = [6, 5, 6]$ cắt ra một đoạn 2, còn thừa 0 (không tốn chi phí)
 - Quy hoạch động: tính $dp[i][r]$ với $i$ là số phần tử đã gộp vào phần thừa và $r$ là độ dài phần còn thừa
    - $dp[i][r] → dp[i + 1][r + A[i]]$
-   - $dp[i][r] → dp[i][r - L1]$
-   - $dp[i][r] → dp[i][r - L2]$
+   - $dp[i][r] → dp[i][r - L_{1}]$
+   - $dp[i][r] → dp[i][r - L_{2}]$
    - $dp[0][0] = 0$
    - --> Kết quả: $dp[n][0]$
 Độ phức tạp $O(N × sum(A[1], …, A[N]))$ hoặc $O(N × max(L_{1}, L_{2}, A[1], …, A[N]))$
