@@ -27,7 +27,7 @@ $cost(u, v) = (\text{kích thước của } P) ^ 2 \times (\text{trọng số nh
 - Ta tính mảng $down1, down2, sz$ bằng một lượt DFS và $up2, down2$ bằng một lượt DFS khác. Việc tính toán chi tiết xin dành cho bạn đọc.
 ### Subtask 4,5,6:
 - Ta sẽ sử dụng thuật toán phân tách trọng tâm.
-- Gọi $ans[u]$ là đáp án cần tính của đỉnh u.
+- Gọi $ans[u]$ là đáp án cần tính của đỉnh $u$.
 - Gọi trọng tâm của cây là đỉnh $c$ và các đỉnh kề với $c$ là $u_{1}, u_{2}, …, u_{k}$. Ta sẽ tính đóng góp của các đường đi qua $c$ vào đáp án của các đỉnh.
 - Ta sử dụng DFS để tính $d[v] = dis(c, v)$ và $mn[v]$ là cạnh nhỏ nhất nằm trên đường đi từ $c$ đến $v$ với mọi đỉnh $v$ nằm trong cây hiện tại.
   
