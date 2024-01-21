@@ -6,7 +6,14 @@ $cost(u, v) = (\text{kích thước của } P) ^ 2 \times (\text{trọng số nh
 - $N \le {10^5}$ và trọng số cạnh $\le {10^9}$.
 - Khi ấy ta có bảng biểu diễn chi tiết như sau:
 
-![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/e24b5991-ccfc-4be2-bc8b-45d8f4221b21)
+| Subtask | Điều kiện  | 
+|----------|----------|
+| 16% | $N \le 5000$ |
+| 12% | $w_{i} \le 2$ và luôn có cạnh giữa $i-1$ và $i$ với mọi $i \ge 2$ |
+| 20% | $w_{i}=1$ |
+| 16% | $w_{i} \le 1000$ |
+| 16% | Luôn có cạnh giữa $i-1$ và $i$ với mọi $i \ge 2$ |
+| 20% | Không có ràng buộc gì thêm |
 
 ## Phân tích từng Subtask 
 ### Subtask 1: $N \le 5000$
