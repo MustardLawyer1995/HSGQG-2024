@@ -6,7 +6,15 @@
 ## Phân tích ràng buộc bài toán
 - $1 \le N \le {10^4},1 \le L_{1},L_{2} \le {10^9},1 \le C,D \le {10^5},1 \le A\left[ i \right] \le {10^9}$
 
-![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/7f1c64ac-ff8c-4bea-8be2-d2b513aa194d)
+| Subtask | Điều kiện  | 
+|----------|----------|
+| 16% | $L_{1}=L_{2}$ |
+| 16% | Tổng các phần tử của dãy $A \le 20$ |
+| 16% | $N,L_{1}, L_{2} \le 100$ và $A[i] \le 100$ |
+| 16% | $A[i] \le 2024$ |
+| 12% | $L_{1}, L_{2} \le 2024$ |
+| 12% | $L_{1} \le 2024$ |
+| 12% | Không có ràng buộc gì thêm |
 
 ## Ví dụ minh họa: 
 - $N = 3; L_{1} = 2; L_{2} = 5; C = 10; D = 4; A = [6, 5, 6]$
