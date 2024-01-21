@@ -11,8 +11,13 @@
     - Cùng độ dài đoạn đầu tiên --> sắp xếp theo độ dài đoạn thứ hai giảm dần
     - Cùng độ dài đoạn đầu tiên và thứ hai --> sắp xếp theo độ dài đoạn thứ ba giảm dần...
 ## Phân tích ràng buộc bài toán
-
-![image](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/fb9c4411-09e6-4bd0-9ad8-ab51ef27b057)
+| Subtask | Điều kiện  | 
+|----------|----------|
+| 17,5% | $n \le 12$ và $q \le 1024$ |
+| 20% | $X=Y=1$ |
+| 22.5% | $L=1,R=n$ và $X,Y \le 1e5$ |
+| 22.5% | $n \le 2000$ và $q \le 20000$ |
+| 17.5% | Không có ràng buộc gì thêm |
 
 ## Phân tích từng Subtask 
 ### Subtask 1: $n \le 12$ và $q \le 1024$
