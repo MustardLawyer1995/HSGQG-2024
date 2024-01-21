@@ -5,7 +5,16 @@
 ## Phân tích ràng buộc bài toán
 - Có $T$ test, với mỗi test: $3 \le N \le 109,3 \le M \le 105,1 \le Q \le 105,1 \le {W_i} \le 109,1 \le {D_j} \le {10^{18}}\$
 - Dữ liệu đảm bảo $1 \le \sum M ,\sum Q  \le 2 \times {10^5}\$
-![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/5e6ca5dd-5936-4388-8c73-e24ff1d755c2)
+
+| Subtask | Điều kiện  | 
+|----------|----------|
+| 20% | $M,N,Q \le 40$ và $T=1$ |
+| 20% | $M,N,Q \le 100$ và $T=1$ |
+| 20% | $M,N,Q \le 500$ và $T=1$ |
+| 20% | $M,Q \le 1000$ và $\sum M , \sum Q \le 2000$ |
+| 10% | $M \le 1000$ và $\sum M \le 2000$ |
+| 10% | Không có ràng buộc gì thêm |
+
 ## Phân tích từng subtask
 ### Subtask 1: $M,N,Q \le 40$ và $T=1$
 - Ở subtask này, chúng ta có thể duyệt thủ công bằng tay ở mọi trường hợp (hàng/cột) có thể xảy ra cho mỗi truy vấn. 
