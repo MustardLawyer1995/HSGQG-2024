@@ -15,7 +15,7 @@ Lúc ban đầu và sau mỗi truy vấn thứ $j$, ta cần tính $ans[j]$ là 
 | 12.5% | $N \le 100, Q \le 800$ |
 | 10% | $N \le 2000, Q \le 800$ |
 | 15% | $N \le 5000, Q \le 8000$ |
-| 17.5% | Luôn tồn tại cạnh nối giữa đỉnh $i$ và  |
+| 17.5% | Luôn tồn tại cạnh nối giữa đỉnh $i$ và $[\frac{i}{2}]$ (cây nhị phân) |
 | 22.5% | Luôn tồn tại cạnh nối giữa đỉnh $i$ và $i-1$ (đồ thị đường thẳng) |
 | 15% | Không có ràng buộc gì thêm |
 
