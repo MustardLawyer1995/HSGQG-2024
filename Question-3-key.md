@@ -9,7 +9,15 @@ Lúc ban đầu và sau mỗi truy vấn thứ $j$, ta cần tính $ans[j]$ là 
 - $1 \le N,Q \le 2 \times {10^5},1 \le K \le 20,1 \le C\left[ i \right] \le {10^9}$
 - Ta có bảng biểu diễn chi tiết như sau:
 
-![Capture](https://github.com/MustardLawyer1995/HSGQG-2024/assets/156400720/7c6583e3-f0d4-425a-8788-cb3a68258786)
+| Subtask | Điều kiện  | 
+|----------|----------|
+| 7.5% | $N \le 30, Q \le 800$ |
+| 12.5% | $N \le 100, Q \le 800$ |
+| 10% | $N \le 2000, Q \le 800$ |
+| 15% | $N \le 5000, Q \le 8000$ |
+| 17.5% | Luôn tồn tại cạnh nối giữa đỉnh $i$ và  |
+| 22.5% | Luôn tồn tại cạnh nối giữa đỉnh $i$ và $i-1$ (đồ thị đường thẳng) |
+| 15% | Không có ràng buộc gì thêm |
 
 ## Phân tích từng Subtask: 
 ### Subtask 1 (7.5%): $N ≤ 30, Q ≤ 800$
